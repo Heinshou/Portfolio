@@ -8,13 +8,16 @@ const AboutMe = () => {
             <div className='frame__one'>
                 <div className='frame__two'>
                     <div className='frame__three'>
-
+                      <div className='frame__four'>
+                        <div className='frame__five'></div>
+                      </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div>
-
+        <div className='description__container'>
+          <h1>Miguel Chávez</h1>
+          <h2>Web Desing</h2>
         </div>
     </section>
   )

@@ -2,6 +2,8 @@
     width: 100%;
     background-color: aliceblue;
     height: 90vh;
+    flex-wrap: wrap;
+    display: flex;
 }
 
 .tunnel__container{  
@@ -21,39 +23,49 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: move 8000ms;
-}
-
-.frame__one:hover{
-    animation: move 8000ms;
+    animation: move 8000ms infinite;
 }
 
 .frame__two{
-        width: 80%;
-        height: 70vh;
+        width: 90%;
+        height: 75vh;
         border: 2px solid white;
         box-shadow: inset 0 0 30px #8A0063, 0 0 30px, 0 0 50px #8A0063;
         display: flex;
         align-items: center;
         justify-content: center;
-        animation: move 8000ms;
+        animation: move 8000ms infinite;
 }
-
-/* .frame__two:hover{
-    animation: move 8000ms
-} */
 
 .frame__three{
-        width: 80%;
-        height: 60vh;
+        width: 90%;
+        height: 70vh;
         border: 2px solid white;
         box-shadow: inset 0 0 30px #8A0063, 0 0 30px, 0 0 50px #8A0063;
-        animation: move 8000ms;
+        animation: move 8000ms infinite;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 }
-/* 
-.frame__three:hover{
-    animation: move 8000ms;
-} */
+
+.frame__four{
+    width: 90%;
+    height: 65vh;
+    border: 2px solid white;
+    box-shadow: inset 0 0 30px #8A0063, 0 0 30px, 0 0 50px #8A0063;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: move 8000ms infinite;
+}
+
+.frame__five{
+    width: 90%;
+    height: 60vh;
+    border: 2px solid white;
+    box-shadow: inset 0 0 30px #8A0063, 0 0 30px, 0 0 50px #8A0063;
+    animation: move 8000ms infinite;
+}
 
 @keyframes move {
     0%{
@@ -74,40 +86,13 @@
     }
 }
 
-@keyframes move__two {
-    0%{
-        transition-delay: 2s;
-        transform:rotate(9deg);
-    }
-    25%{
-        transition-delay: 2s;
-        transform: rotate(-9deg) ;
-    }
-    50%{
-        transition-delay: 2s;
-        transform: rotate(20deg);
-    }
-    100%{
-       transition-delay: 2s;
-       transform: rotate(0deg);
-    }
+.description__container{  
+    width: 50%; 
+    height: 90vh;
+    background-color: #031321;
+    color:#8A0063;
+    text-align: center;
+    justify-content: center;
 }
 
-@keyframes move__three {
-    0%{
-        transition-delay: 2.2s;
-        transform:rotate(10deg);
-    }
-    25%{
-        transition-delay: 2.2s;
-        transform: rotate(-10deg) ;
-    }
-    50%{
-        transition-delay: 2.2s;
-        transform: rotate(20deg);
-    }
-    100%{
-       transition-delay: 2.2s;
-       transform: rotate(0deg);
-    }
-}
+
