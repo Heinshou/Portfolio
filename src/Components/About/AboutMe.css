@@ -6,8 +6,9 @@
     display: flex;
 }
 
-.tunnel__container{  
-    width: 50%; 
+.tunnel__container{ 
+    overflow: hidden; 
+    width: 65%; 
     height: 90vh;
     background-color: #031321;
     align-items: center;
@@ -23,7 +24,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: move 8000ms infinite;
+    animation: move 4000ms infinite;
 }
 
 .frame__two{
@@ -34,7 +35,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        animation: move 8000ms infinite;
+        animation: move 4000ms infinite;
 }
 
 .frame__three{
@@ -42,7 +43,7 @@
         height: 70vh;
         border: 2px solid white;
         box-shadow: inset 0 0 30px #8A0063, 0 0 30px, 0 0 50px #8A0063;
-        animation: move 8000ms infinite;
+        animation: move 4000ms infinite;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -56,7 +57,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: move 8000ms infinite;
+    animation: move 4000ms infinite;
 }
 
 .frame__five{
@@ -64,12 +65,12 @@
     height: 60vh;
     border: 2px solid white;
     box-shadow: inset 0 0 30px #8A0063, 0 0 30px, 0 0 50px #8A0063;
-    animation: move 8000ms infinite;
+    animation: move 4000ms infinite;
 }
 
 @keyframes move {
     0%{
-        transition-delay: 1.8s;
+        transition-delay: .25s;
         transform:rotate(0deg) 
     }
     25%{
@@ -81,13 +82,13 @@
         transform: rotate(10deg);
     }
     100%{
-        transition-delay: 1.8s;
+        transition-delay: .25s;
         transform: rotate(0deg);
     }
 }
 
 .description__container{  
-    width: 50%; 
+    width: 35%; 
     height: 90vh;
     background-color: #031321;
     color:#8A0063;
@@ -95,4 +96,38 @@
     justify-content: center;
 }
 
+#text{
+    width: 80%;
+    height: 80%;
+    stroke-dasharray: 529;
+    stroke-dashoffset: 0;
+    animation: 2s fillSvg linear;
+   
+}
 
+@keyframes fillSvg {
+    0%{
+        stroke-dashoffset: 529;
+    }
+    100%{
+        stroke-dashoffset: 0;
+    }
+}
+
+.name{
+    color:#031321;
+    animation: 6s brigthName linear;
+}
+
+@keyframes brigthName {
+    0%{
+        color: #8a006300;
+    }
+    50%{
+        color: #8A0063;
+    }
+    100%{
+        color: #8A0063;
+       text-shadow: 0 0 50px #8A0063;
+    }
+}
