@@ -120,9 +120,7 @@ const AboutMe = () => {
             </defs>
           </svg>
         </h2>
-        <p>Estudiante de programación Web Full-Stack en Academlo, me considero alguien puntual y muy bueno para convivir con otras personas, me gusta ponerle buena cara a los problemas, soy muy ingenioso tanto para buscar soluciones como para bromear. Animo a los demás al igual que me gusta explicarles o ayudarles a los demás en caso de que tengan algún problema. En mis conocimientos cuento con ingles intermedio alto, JS, CSS, React (enamorado de este ultimo).
-
-En mis tiempos libres me gusta jugar video juegos y pasar tiempo con mis mascotas.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, adipisci architecto. Incidunt omnis expedita aperiam, deleniti cum, quae laborum quisquam nam quo eum amet, dignissimos tenetur quam? Culpa, fugit nulla!</p>
       </div>
     </section>
   )

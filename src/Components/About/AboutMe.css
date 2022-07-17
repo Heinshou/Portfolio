@@ -115,19 +115,35 @@
 }
 
 .name{
-    color:#031321;
-    animation: 6s brigthName linear;
+    color:white;
+    animation: 2.8s brigthName ease-in;
+    text-shadow: 0px 0px 10px #15f4EE, 0px 0px 30px #15f4EE;
+    font-size: 1.5rem;
+    padding: 0;
+    margin-top: 7rem;
+    margin-bottom: 1.8rem;
+    /* overflow: hidden; */
+    margin-right: 20px;
+}
+
+p{
+    font-size: small;
+    margin-right: 20px;
 }
 
 @keyframes brigthName {
     0%{
         color: #8a006300;
     }
-    50%{
-        color: #8A0063;
+    33%{
+        color: #031321;
+    }
+    66%{
+        color: #15f4EE;
+        text-shadow: 0 0 50px white;
     }
     100%{
-        color: #8A0063;
-       text-shadow: 0 0 50px #8A0063;
+        color: white;
+        text-shadow: 0px 0px 10px #15f4EE, 0px 0px 30px #15f4EE;
     }
 }
