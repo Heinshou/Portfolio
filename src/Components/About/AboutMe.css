@@ -17,8 +17,8 @@
 }
 
 .frame__one{
-    width: 50%;
-    height: 80vh;
+    width: 45%;
+    height: 75vh;
     border: 2px solid white;
     box-shadow: inset 0 0 30px #8A0063, 0 0 30px, 0 0 50px #8A0063;
     display: flex;
@@ -28,8 +28,8 @@
 }
 
 .frame__two{
-        width: 90%;
-        height: 75vh;
+        width: 85%;
+        height: 70vh;
         border: 2px solid white;
         box-shadow: inset 0 0 30px #8A0063, 0 0 30px, 0 0 50px #8A0063;
         display: flex;
@@ -39,8 +39,8 @@
 }
 
 .frame__three{
-        width: 90%;
-        height: 70vh;
+        width: 85%;
+        height: 65vh;
         border: 2px solid white;
         box-shadow: inset 0 0 30px #8A0063, 0 0 30px, 0 0 50px #8A0063;
         animation: move 4000ms infinite;
@@ -50,8 +50,8 @@
 }
 
 .frame__four{
-    width: 90%;
-    height: 65vh;
+    width: 85%;
+    height: 60vh;
     border: 2px solid white;
     box-shadow: inset 0 0 30px #8A0063, 0 0 30px, 0 0 50px #8A0063;
     display: flex;
@@ -61,8 +61,8 @@
 }
 
 .frame__five{
-    width: 90%;
-    height: 60vh;
+    width: 85%;
+    height: 55vh;
     border: 2px solid white;
     box-shadow: inset 0 0 30px #8A0063, 0 0 30px, 0 0 50px #8A0063;
     animation: move 4000ms infinite;
@@ -121,14 +121,17 @@
     font-size: 1.5rem;
     padding: 0;
     margin-top: 7rem;
-    margin-bottom: 1.8rem;
+    margin-bottom: 2rem;
     /* overflow: hidden; */
     margin-right: 20px;
 }
 
 p{
-    font-size: small;
+    display: flex;
+    font-size: large ;
     margin-right: 20px;
+    font-family: 'Inconsolata', monospace;
+    color: white;
 }
 
 @keyframes brigthName {
@@ -140,10 +143,47 @@ p{
     }
     66%{
         color: #15f4EE;
-        text-shadow: 0 0 50px white;
+        text-shadow: 0 0 35px white;
     }
     100%{
         color: white;
         text-shadow: 0px 0px 10px #15f4EE, 0px 0px 30px #15f4EE;
+    }
+}
+
+.icons__wrapper{
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    margin-top: 15%;
+    color: white;
+}
+.icon{
+    display: inline-block;
+    font-size: 44px;
+    animation: float 5s ease-in-out infinite;
+    /* color: #15f4EE; */
+}
+
+.fa-linkedin{
+    animation-delay: 1s;
+    /* color:#e9019a; */
+}
+
+.fa-twitter{
+    animation-delay: 2s;
+    /* color:#f40468; */
+}
+
+@keyframes float {
+    0%, 100%{
+        transform: translateY(0);
+        text-shadow: 0px 0px 15px #8A0063;
+    }
+    50%{
+        transform: translateY(-15px);
+        text-shadow: 0px 0px 10px #15f4EE;
     }
 }

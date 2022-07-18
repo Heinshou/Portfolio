@@ -1,0 +1,23 @@
+.skills__container{
+    width: 100vw;
+    height: 250px;
+    display: flexbox;
+    justify-content: center;
+}
+
+
+
+.skills__container{
+  font-variation-settings: "wght" 900, "ital" 1;
+  font-size: 3rem;
+  text-align: center;
+  color: transparent;
+  font-family: "Meta", sans-serif;
+  text-shadow: 5px 5px 0px #07bccc,
+    5px 5px 0px #e601c0,
+    10px 10px 0px #e9019a,
+    15px 15px 0px #f40468,
+    25px 25px 5px #482896;
+  cursor: pointer;
+}
+
