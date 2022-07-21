@@ -10,8 +10,8 @@ function App() {
 
   return (
     <div>
-      {/* <NavBar/>
-      <AboutMe/> */}
+      <NavBar/>
+      <AboutMe/>
       <Skills/>
     </div>
   )

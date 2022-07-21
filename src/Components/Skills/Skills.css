@@ -12,7 +12,7 @@
   font-size: 3rem;
   text-align: center;
   color: transparent;
-  margin-left: 5%;
+  margin-left: 10%;
 
   text-shadow: 5px 5px 0px #07bccc,
     5px 5px 0px #e601c0,
@@ -22,13 +22,14 @@
 }
 
 .television__container{
-    width: 100vw;
-    height: 70vh;
+    width: 75vw;
+    height: 95vh;
     background-color: #031321;
     align-items: center;
     justify-content: center;
     display: flex;
-
+    margin: auto;
+    margin-left: 14%;
 }
 
 .television__frame{
@@ -163,7 +164,7 @@
     border: 2px solid white;
     box-shadow: inset 0 0 30px #8A0063, 0 0 30px, 0 0 50px #8A0063;
     border-radius: 50%;
-    margin: 0px 0px 0px 8%;
+    margin: 0px 0px 0px 10%;
 }
 
 .right__side__bluelines{
