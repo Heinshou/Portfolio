@@ -1,5 +1,5 @@
 .skills__container{
-    width: 100vw;
+    width: 90vw;
     height: 250px;
     display: flexbox;
     justify-content: center;
@@ -7,17 +7,167 @@
 
 
 
-.skills__container{
+.skills__tittle{
   font-variation-settings: "wght" 900, "ital" 1;
   font-size: 3rem;
   text-align: center;
   color: transparent;
-  font-family: "Meta", sans-serif;
+  margin-left: 5%;
+
   text-shadow: 5px 5px 0px #07bccc,
     5px 5px 0px #e601c0,
     10px 10px 0px #e9019a,
     15px 15px 0px #f40468,
     25px 25px 5px #482896;
-  cursor: pointer;
 }
 
+.television__container{
+    width: 100vw;
+    height: 70vh;
+    background-color: #031321;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+}
+
+.television__frame{
+    border: 2px solid white;
+    box-shadow: inset 0 0 30px #8A0063, 0 0 30px, 0 0 50px #8A0063;
+    height: 80%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.television__frame__two{
+    height: 80%;
+    width: 90%;
+    border: 2px solid white;
+    box-shadow: inset 0 0 30px #8A0063, 0 0 30px, 0 0 50px #8A0063;
+    display: flex;
+}
+
+.left__side{
+    height: calc(100% - 4px);
+    width: calc((100% * 1/6) - 4px);
+    border: 2px solid white;
+    box-shadow: inset 0 0 30px #8A0063, 0 0 30px, 0 0 50px #8A0063;
+
+}
+.left__side__square{
+    height: calc( 30% - 4px);
+    border: 2px solid white;
+    box-shadow: inset 0 0 30px #8A0063, 0 0 30px, 0 0 50px #8A0063;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.circle__one{
+    height: calc(80%);
+    width: calc(80%);
+    border: 2px solid white;
+    box-shadow: inset 0 0 30px #ff0080, 0 0 30px, 0 0 50px #ff0080;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle__two{
+    height: 60%;
+    width: 60%;
+    border: 2px solid white;
+    box-shadow: inset 0 0 30px #ff0080, 0 0 30px, 0 0 50px #ff0080;
+    border-radius: 50%;
+}
+
+.left__side__rectangle{
+    height: calc( 10% - 4px);
+    border: 2px solid white;
+    box-shadow: inset 0 0 30px #8A0063, 0 0 30px, 0 0 50px #8A0063;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left__side__rectangle__two{
+    height: 50%;
+    width: 80%;
+    border: 2px solid white;
+    box-shadow: inset 0 0 30px #8A0063, 0 0 30px, 0 0 50px #8A0063;
+}
+
+
+.left__side__bluelines{
+    height: calc( 60% - 4px);
+    border: 2px solid white;
+    box-shadow: inset 0 0 30px #8A0063, 0 0 30px, 0 0 50px #8A0063;
+}
+.bluelines{
+    width: calc(90% - 4px);
+    height: 2px;
+    border: 2px solid white;
+    box-shadow: inset 0 0 30px #15f4EE, 0 0 30px, 0 0 50px #15f4EE;
+    margin: 14% 0px 0px 5%;
+}
+
+.screen_frame{
+    height: 99%;
+    width: calc((100%*4/6));
+    border: 2px solid white;
+    box-shadow: inset 0 0 30px #8A0063, 0 0 30px, 0 0 50px #8A0063;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.screen{
+    height: calc(80% - 4px);
+    width: calc(85% - 4px);
+    border: 2px solid white;
+    box-shadow: inset 0 0 30px #15f4EE, 0 0 30px, 0 0 50px #15f4EE;
+    border-radius: 20%;
+}
+
+.right__side{
+    height: 100%;
+    width: calc(100%*1/6);
+    border: 2px solid white;
+    box-shadow: inset 0 0 30px #8A0063, 0 0 30px, 0 0 50px #8A0063;
+}
+
+.right__side__square{
+    height: calc( 30% - 4px);
+    border: 2px solid white;
+    box-shadow: inset 0 0 30px #8A0063, 0 0 30px, 0 0 50px #8A0063;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right__side__rectangle{
+    height: calc( 10% - 4px);
+    border: 2px solid white;
+    box-shadow: inset 0 0 30px #8A0063, 0 0 30px, 0 0 50px #8A0063;
+    display: flex;
+    align-items: center;
+}
+
+.circle__rectangle{
+    height: 60%;
+    aspect-ratio: 1/1;
+    border: 2px solid white;
+    box-shadow: inset 0 0 30px #8A0063, 0 0 30px, 0 0 50px #8A0063;
+    border-radius: 50%;
+    margin: 0px 0px 0px 8%;
+}
+
+.right__side__bluelines{
+    height: calc( 60% - 4px);
+    border: 2px solid white;
+    box-shadow: inset 0 0 30px #8A0063, 0 0 30px, 0 0 50px #8A0063;
+}

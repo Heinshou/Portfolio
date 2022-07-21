@@ -121,11 +121,20 @@ const AboutMe = () => {
           </svg>
         </h2>
         <div className='description'>
-          <p>Full-Stack web programming student at Academlo, looking for new knowledge and new challenges
-            to make my stack of abilities bigger so i can archive my goals and my dreams, i consider my self a commited person,
-            I like to put a good face on problems, I am very ingenious both to find solutions and to joke around. I encourage
-            others just as I like to explain or help others in case they have a problem. In my knowledge I have high intermediate
-            English, JS, CSS, React</p>
+          <p>Full-Stack web programming student at Academlo, looking for new challenges to increase my knowledge and achieve my dreams.
+            I consider myself a committed person, I like to put a good face on adversity, I am very ingenious and I love to find solutions, I'm very light-hearted and I like to joke around to make my work environment relaxed and easy to work.
+            I like to encourage others, to help whenever I see a problem and I love to explain and share my knowledge.
+            <br/>
+            <br/>
+            Knowledge
+            <br/>
+            
+            Languajes:
+            Native Spanish,
+            Advanced English
+            <br/>
+            Programing:
+            Intermediate JS, CSS, React</p>
         </div>
         <div className='icons__wrapper'>
           <i className="fa-brands fa-github icon firstone"></i>

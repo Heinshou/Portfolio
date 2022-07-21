@@ -122,8 +122,7 @@
     padding: 0;
     margin-top: 7rem;
     margin-bottom: 2rem;
-    /* overflow: hidden; */
-    margin-right: 20px;
+    margin-right: 20px; 
 }
 
 p{
@@ -157,24 +156,24 @@ p{
     justify-content: space-around;
     align-items: center;
     margin: auto;
-    margin-top: 15%;
+    margin-top: 10%;
     color: white;
 }
 .icon{
     display: inline-block;
-    font-size: 44px;
-    animation: float 5s ease-in-out infinite;
-    /* color: #15f4EE; */
+    font-size: 5rem;
+    animation: float 2s ease-in-out infinite;
+  
 }
 
 .fa-linkedin{
     animation-delay: 1s;
-    /* color:#e9019a; */
+  
 }
 
 .fa-twitter{
     animation-delay: 2s;
-    /* color:#f40468; */
+   
 }
 
 @keyframes float {
