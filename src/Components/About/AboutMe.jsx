@@ -138,8 +138,8 @@ const AboutMe = () => {
         </div>
         <div className='icons__wrapper'>
           <i className="fa-brands fa-github icon firstone"></i>
-          <i class="fa-brands fa-linkedin icon secondone"></i>
-          <i class="fa-brands fa-twitter icon thirdone"></i>
+          <i className="fa-brands fa-linkedin icon secondone"></i>
+          <i className="fa-brands fa-twitter icon thirdone"></i>
         </div>
       </div>
     </section>
