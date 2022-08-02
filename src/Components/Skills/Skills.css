@@ -110,7 +110,7 @@
     box-shadow: inset 0 0 30px #8A0063, 0 0 30px, 0 0 50px #8A0063;
 }
 
-.screen_frame {
+.screen__frame {
     height: 99%;
     width: calc((100%*4/6));
     border: 2px solid white;
@@ -126,16 +126,53 @@
     border: 2px solid white;
     box-shadow: inset 0 0 30px #15f4EE, 0 0 30px, 0 0 50px #15f4EE;
     border-radius: 20%;
-    display: flex;
     justify-content: center;
     align-items: center;
     background-color: white;
+    overflow: hidden;
+    /* display: none; */
 }
 
-.img__skills{
+.skills__slider {
+    margin-left: 25%;
+    width: 550%;
+    height: 100%;
+    transform: translateX(calc(-100% * 0 / 4));
+    transition: transform 0.5ms ease;
+    z-index: -1;
+}
+
+.image__skill {
     width: 200px;
     height: 200px;
+    margin-right: 15%;
+    margin-top: 1.5%;
+    margin-left: 1%;
 }
+
+.second__img {
+    margin-left: 2.5%;
+    transform: translateX(calc(-100% * .77 / 4));
+    transition: transform 0.5ms ease;
+}
+
+.third__img {
+    margin-left: 3%;
+    transform: translateX(calc(-100% * 1.7 / 4));
+    transition: transform 0.5ms ease;
+}
+
+.fourth__img {
+    margin-left: 5.5%;
+    transform: translateX(calc(-100% * 2.74 / 4));
+    transition: transform 0.5ms ease;
+}
+
+@keyframes static {
+    
+}
+
+
 
 .right__side {
     height: calc(100% -4px);
@@ -172,6 +209,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+
+.button__left {
+    cursor: pointer;
+}
+
+.button__left:hover {
+    color: #15f4EE;
 }
 
 .right__side__bluelines {
@@ -274,4 +320,3 @@ button:hover span:nth-child(4) {
     transition: 1s;
     transition-delay: .75s;
 }
-
