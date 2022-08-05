@@ -121,6 +121,7 @@
 }
 
 .screen {
+    position: relative;
     height: calc(80% - 4px);
     width: calc(85% - 4px);
     border: 2px solid white;
@@ -143,11 +144,15 @@
 }
 
 .image__skill {
-    width: 200px;
-    height: 200px;
-    margin-right: 15%;
-    margin-top: 1.5%;
-    margin-left: 1%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
 }
 
 .second__img {
