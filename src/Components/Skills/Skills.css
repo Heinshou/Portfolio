@@ -383,3 +383,7 @@ button:hover span:nth-child(4) {
     width: 120%;
 }
 
+.screen__off{
+    height: 350px;
+    width: 350px;
+}

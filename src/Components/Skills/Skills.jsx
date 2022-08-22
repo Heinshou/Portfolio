@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './Skills.css'
-import { cssImg, htmlImg, javascriptImg, reactImg, teamWorkImg, weatherGif, pokedexGif, commerceGif, staticGIF } from '../../utils/images';
+import { cssImg, htmlImg, javascriptImg, reactImg, teamWorkImg, weatherGif, pokedexGif, commerceGif, staticGIF, screenOffGif } from '../../utils/images';
 import { softSkills, skills, portfolio } from '../../utils/description';
 
 const softSkillsDescription = softSkills
@@ -28,12 +28,15 @@ const portfolioImg = [
     <img className=' image__skill portfolio__pokedex' src={pokedexGif} alt="Pokedex" href="https://pokedex-mike-dev.netlify.app/" />,
     <img className=' image__skill portfolio__weather' src={weatherGif} alt="Pokedex" href="https://pokedex-mike-dev.netlify.app/" />,
     <img className=' image__skill portfolio__weather' src={commerceGif} alt="Pokedex" href="https://pokedex-mike-dev.netlify.app/" />
+]
 
+const tvOff = [
+    <img className='image__skill screen__off' src={screenOffGif} alt='screen off gif'/>
 ]
 
 const Skills = () => {
 
-    const [category, setCategory] = useState([]);
+    const [category, setCategory] = useState([tvOff]);
     const [index, setIndex] = useState(0);
     const [powerButton, setPowerButton] = useState('')
 
@@ -65,11 +68,15 @@ const Skills = () => {
     const turnTV = () => {
         if(powerButton === ''){
             setPowerButton('prendio')
+            setIndex(0)
+            setCategory(skillsImg)
         } else {
             setPowerButton('')
+            setCategory([tvOff])
         }
     }
 
+    console.log(index)
     return (
         <div className='skills__container'>
             <h3 className='skills__tittle'>Skills</h3>

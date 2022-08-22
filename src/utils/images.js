@@ -15,3 +15,5 @@ export const pokedexGif ='https://pokedex-mike-dev.netlify.app/assets/gifpokebol
 export const commerceGif = 'https://media2.giphy.com/media/U577M8yXE3c3tDJRLy/200w.webp?cid=ecf05e47v6zi42zph7rok8k87yan8qcuc2hot22ik7y8f53s&rid=200w.webp&ct=s'
 
 export const staticGIF = 'https://media2.giphy.com/media/riw3K0D2h4klG/giphy.gif?cid=ecf05e47xyz7o9gpz8f29a77fc2h8v9sdsl1v9gymkwh3kur&rid=giphy.gif&ct=g'
+
+export const screenOffGif = 'https://media0.giphy.com/media/l1J9EdzfOSgfyueLm/giphy.gif?cid=ecf05e47mbwweygd7ldnr0ayrzldr960m2geepdaeue27cm4&rid=giphy.gif&ct=g'
