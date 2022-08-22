@@ -1,6 +1,6 @@
 .about__me{
     width: 100%;
-    background-color: aliceblue;
+    background-color: #031321;
     height: 90vh;
     flex-wrap: wrap;
     display: flex;
@@ -138,7 +138,7 @@ p{
         color: #8a006300;
     }
     33%{
-        color: #031321;
+        color: black;
     }
     66%{
         color: #15f4EE;
