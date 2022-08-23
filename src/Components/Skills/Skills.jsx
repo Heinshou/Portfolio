@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import './Skills.css'
-import { cssImg, htmlImg, javascriptImg, reactImg, teamWorkImg, weatherGif, pokedexGif, commerceGif, staticGIF, screenOffGif } from '../../utils/images';
+import { cssImg, htmlImg, javascriptImg, reactImg, teamWorkImg, weatherGif, pokedexGif, commerceGif, staticGIF, screenOffGif, creativityGif, atittudeGif } from '../../utils/images';
 import { softSkills, skills, portfolio } from '../../utils/description';
+import { skillsTitles, softSkillsTitles, portfolioTitles} from '../../utils/titles'
 
 const softSkillsDescription = softSkills
 
@@ -21,7 +22,10 @@ const skillsImg = [
 
 ]
 const softSkillsImg = [
-    <img className='image__skill teamWorkImage' src={teamWorkImg} alt="TeamWork" />,
+    <img className='image__skill teamWork__image' src={teamWorkImg} alt="TeamWork" />,
+    <img className='image__skill creativity__image' src={creativityGif} alt="Creativity" />,
+    <img className='image__skill creativity__image' src={atittudeGif} alt="Creativity" />,
+
 ]
 
 const portfolioImg = [
@@ -90,7 +94,13 @@ const Skills = () => {
                                 </div>
                             </div>
                             <div className="left__side__rectangle">
-                                <div className="left__side__rectangle__two"></div>
+                                {/* <div className="left__side__rectangle__two"> */}
+                                    <p className='tv__titles'> 
+                                        {category === skillsImg ? skillsTitles[index] : ''}
+                                        {category === softSkillsImg ? softSkillsTitles[index] : ''}
+                                        {category === portfolioImg ? portfolioTitles[index] : ''}
+                                    </p>
+                                {/* </div> */}
                             </div>
                             <div className="left__side__bluelines">
                             <p className='description__text'>

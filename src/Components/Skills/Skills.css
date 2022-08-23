@@ -369,7 +369,7 @@ button:hover span:nth-child(4) {
     transition-delay: .75s;
 }
 
-.teamWorkImage{
+.teamWork__image{
     border-radius: 75%;
 }
 
@@ -384,6 +384,12 @@ button:hover span:nth-child(4) {
 }
 
 .screen__off{
-    height: 350px;
-    width: 350px;
+    height: 530px;
+    width:  530px;
+}
+
+.tv__titles{
+    margin:0px;
+    margin-block-end: 0px;
+    margin-block-start: 0px;
 }
