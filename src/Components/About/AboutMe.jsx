@@ -3,7 +3,7 @@ import './AboutMe.css'
 
 const AboutMe = () => {
   return (
-    <section className='about__me'>
+    <main className='about__me'>
       <div className='tunnel__container'>
         <div className='frame__one'>
           <div className='frame__two'>
@@ -137,12 +137,12 @@ const AboutMe = () => {
             Intermediate JS, CSS, React</p>
         </div>
         <div className='icons__wrapper'>
-          <i className="fa-brands fa-github icon firstone"></i>
-          <i className="fa-brands fa-linkedin icon secondone"></i>
-          <i className="fa-brands fa-twitter icon thirdone"></i>
+          <i className="fa-brands fa-github icon"></i>
+          <i className="fa-brands fa-linkedin icon"></i>
+          <i className="fa-brands fa-twitter icon"></i>
         </div>
       </div>
-    </section>
+    </main>
   )
 }
 

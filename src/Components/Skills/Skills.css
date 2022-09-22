@@ -3,11 +3,12 @@
     height: 250px;
     display: flexbox;
     justify-content: center;
+    margin-top: 10%;
 }
 
 
 
-.skills__tittle {
+.skills__title {
     font-variation-settings: "wght" 900, "ital" 1;
     font-size: 3rem;
     text-align: center;
@@ -111,6 +112,11 @@
     /* box-shadow: inset 0 0 30px #8A0063, 0 0 30px, 0 0 50px #8A0063; */
     text-align: center;
 }
+
+.description__container{
+    align-items:flex-start;
+}
+
 .description__text{
     left: 5%;
     font-size:17px;
@@ -230,8 +236,9 @@
 }
 
 .right__side__bluelines {
-    height: calc(60% - 4px);
+    height: calc(61% - 4px);
     border: 2px solid white;
+    /* border-bottom: none; */
     /* box-shadow: inset 0 0 30px #8A0063, 0 0 30px, 0 0 50px #8A0063; */
 }
 
@@ -306,7 +313,7 @@ button:hover {
     color: #255784;
     background: #2196f3;
     box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
-    transition-delay: 1s;
+    transition-delay: 0.05s;
 }
 
 button span {
@@ -393,3 +400,107 @@ button:hover span:nth-child(4) {
     margin-block-end: 0px;
     margin-block-start: 0px;
 }
+
+.cell__container{
+    display: none;
+}
+
+@media screen and (max-width: 1024px) {
+
+.cell__container{
+    display: none;
+}
+
+.description__text{
+    font-size: 14px;
+}
+
+    .skills__container {
+        margin-top: 10%;
+        text-align: center;
+        
+    }
+    
+    .skills__title {
+        font-variation-settings: "wght" 900, "ital" 1;
+        font-size: 3rem;
+        text-align: center;
+        color: transparent;
+        margin-left:10% ;
+        margin-bottom: 5%;
+        text-shadow: 5px 5px 0px #07bccc,
+            5px 5px 0px #e601c0,
+            10px 10px 0px #e9019a,
+            15px 15px 0px #f40468,
+            25px 25px 5px #482896;
+    }
+
+    .description__text{
+       font-size: 10px;
+       padding-right: 15%;
+       padding-left: 5%;
+       margin-top: 15%;
+    }
+    
+    .image__static{
+        height: 120%;
+        width: 120%;
+    }
+    
+    .screen__off{
+        height: 350px;
+        width:  350px;
+    }
+   
+    .button__bluelines {
+        background-color: rgba(0, 195, 255, 0);
+        color: white;
+        border: none;
+    }
+
+    button{
+        padding:10px 10px 10px 10px;
+        font-size: 75%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .screen__off{
+        height: 260px;
+        width: 260px;
+    }
+    }
+
+    .cell__container{
+        display: none;
+    }
+
+
+@media screen and (max-width: 426px) {
+
+    .television__container{
+        display:block;
+    }
+
+    .skills__container{
+        display: flex;
+        align-items:flex-start;
+        justify-content: center;
+        margin: auto;
+        margin-top: 5%;
+        max-width: 100vw;
+    }
+
+    .skills__title{
+       width: 50%;
+    }
+
+    .cell__container{
+        width: 40px;
+        height: 60px;
+        background-color: white;
+        border: 1px red solid ;
+        display: none;
+    }
+}
+

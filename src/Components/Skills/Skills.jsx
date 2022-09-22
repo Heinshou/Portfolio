@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './Skills.css'
 import { cssImg, htmlImg, javascriptImg, reactImg, teamWorkImg, weatherGif, pokedexGif, commerceGif, staticGIF, screenOffGif, creativityGif, atittudeGif } from '../../utils/images';
 import { softSkills, skills, portfolio } from '../../utils/description';
@@ -40,7 +40,7 @@ const tvOff = [
 
 const Skills = () => {
 
-    const [category, setCategory] = useState([tvOff]);
+    const [category, setCategory] = useState(tvOff);
     const [index, setIndex] = useState(0);
     const [powerButton, setPowerButton] = useState('')
 
@@ -51,7 +51,7 @@ const Skills = () => {
         } else {
             setIndex((state) => state + 1)
         }
-        console.log(index)
+  
     }
 
     const clickPrev = () => {
@@ -61,7 +61,7 @@ const Skills = () => {
         } else {
             setIndex(prevClass)
         }
-        console.log(index)
+
     }
 
     const handleCategory = (array) => {
@@ -76,14 +76,23 @@ const Skills = () => {
             setCategory(skillsImg)
         } else {
             setPowerButton('')
-            setCategory([tvOff])
+            setCategory(tvOff)
         }
     }
 
-    console.log(index)
+    useEffect(() => {
+      if(category !== tvOff){
+        setPowerButton('prendio')
+      } else {
+        setPowerButton('')
+      }
+    
+    }, [category])
+    
+
     return (
-        <div className='skills__container'>
-            <h3 className='skills__tittle'>Skills</h3>
+        <section className='skills__container'>
+            <h3 className='skills__title'>Skills</h3>
             <div className='television__container'>
                 <div className='television__frame'>
                     <div className="television__frame__two">
@@ -139,43 +148,33 @@ const Skills = () => {
                             </div>
                             <div className="right__side__bluelines">
                                 <div className="bluelines">
-                                    <button className='button__bluelines' onClick={() => handleCategory(skillsImg)}>Skills
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                    </button>
+                                    <button className='button__bluelines' onClick={() => handleCategory(skillsImg)}>Skills</button>
                                 </div>
                                 <div className="bluelines">
-                                    <button className='button__bluelines' onClick={() => handleCategory(softSkillsImg)}>SoftSkills
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                    </button>
+                                    <button className='button__bluelines' onClick={() => handleCategory(softSkillsImg)}>SoftSkills</button>
                                 </div>
                                 <div className="bluelines">
-                                    <button className='button__bluelines' onClick={() => handleCategory(portfolioImg)}>Portfolio
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                    </button>
+                                    <button className='button__bluelines' onClick={() => handleCategory(portfolioImg)}>Portfolio</button>
                                 </div>
                                 <div className="bluelines">
-                                    <button className='button__bluelines'>Contact
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                    </button>
+                                    <button className='button__bluelines'>Contact</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+            <div className="cell__container">
+                <div className="cell__screen">
+                    
+                </div>
+                <div className="buttons__container">
+                    <button className='left'></button>
+                    <button className="onoff"></button>
+                    <button className="right"></button>
+                </div>
+            </div>
+        </section>
 
     )
 }
