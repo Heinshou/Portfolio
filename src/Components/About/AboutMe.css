@@ -1,7 +1,6 @@
 .about__me{
     width: 100%;
     background-color: #031321;
-    height: 90vh;
     flex-wrap: wrap;
     display: flex;
 }
