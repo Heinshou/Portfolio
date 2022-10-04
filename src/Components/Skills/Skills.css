@@ -552,8 +552,10 @@ button:hover span:nth-child(4) {
     }
 
     .cell__power__button{
-        margin-left: 15%;
-        margin-right: 15%;
+        margin-left: 10%;
+        margin-right: 10%;
+        padding: 5px 5px 5px 5px;
+        margin-top: 5%;
         border-radius: 50%;
         background-color: #031321;
         color: #8a0063;

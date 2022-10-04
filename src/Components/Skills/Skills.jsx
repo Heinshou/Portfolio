@@ -45,6 +45,8 @@ const Skills = () => {
     const [powerButton, setPowerButton] = useState('');
     const [cellCategories, setCellCategories] = useState('cell__categories__off');
     const [customScreen, setCustomScreen] = useState('menu__cell__screen');
+    const [homeButton, setHomeButton] = useState('fa-solid fa-power-off fa-lg')
+
 
     const clickNext = () => {
         const nextClass = index + 1
@@ -98,7 +100,7 @@ const Skills = () => {
         if (category !== tvOff) {
             setPowerButton('prendio')
             
-        } else {
+        } else{
             setPowerButton('')
             setCellCategories('cell__categories__off')
         }
@@ -109,12 +111,20 @@ const Skills = () => {
         if (category !== '') {
             setCellCategories('cell__categories__off')
             setCustomScreen('images__cell__screen')
-        } else {
+        }  else {
             setCellCategories('right__side__bluelines') 
             setCustomScreen('menu__cell__screen')
         }
 
     }, [category])
+
+    useEffect(()=> {
+        if(customScreen !== 'images__cell__screen' || powerButton === ''){
+            setHomeButton('fa-solid fa-power-off fa-lg')
+        }   else {
+            setHomeButton('fa-solid fa-house fa-lg')
+        }
+    })
 
     return (
         <section className='skills__container'>
@@ -226,7 +236,9 @@ const Skills = () => {
                 </div>
                 <div className="buttons__container">
                     <button className='cell__left__button' onClick={clickPrev}></button>
-                    <button className="cell__power__button" onClick={() => turnCell()}></button>
+                    <button className="cell__power__button" onClick={() => turnCell()}>
+                    <i className={`${homeButton}`}></i>
+                    </button>
                     <button className="cell__right__button" onClick={clickNext}></button>
                 </div>
             </div>
