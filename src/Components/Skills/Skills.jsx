@@ -42,8 +42,9 @@ const Skills = () => {
 
     const [category, setCategory] = useState(tvOff);
     const [index, setIndex] = useState(0);
-    const [powerButton, setPowerButton] = useState('')
-    const [cellCategories, setCellCategories] = useState('cell__categories__off')
+    const [powerButton, setPowerButton] = useState('');
+    const [cellCategories, setCellCategories] = useState('cell__categories__off');
+    const [customScreen, setCustomScreen] = useState('menu__cell__screen');
 
     const clickNext = () => {
         const nextClass = index + 1
@@ -107,9 +108,10 @@ const Skills = () => {
     useEffect(() => {
         if (category !== '') {
             setCellCategories('cell__categories__off')
-            
+            setCustomScreen('images__cell__screen')
         } else {
             setCellCategories('right__side__bluelines') 
+            setCustomScreen('menu__cell__screen')
         }
 
     }, [category])
@@ -190,25 +192,31 @@ const Skills = () => {
             </div>
             <div className="cell__container">
                 <span className='cell__audio'></span>
-                <div className="cell__screen">
+                <div className={`cell__screen ${customScreen}`}>
                 <div  className={`${cellCategories}`}>
                                 <div className='bluelines'>
                                     <button className='button__bluelines' onClick={() => handleCategory(skillsImg)}>
-                                    <i className="fa-solid fa-book fa-2xl"></i>
-                                    <p className='cell__app__text'>Skills</p>
+                                    <i className=" fa-solid fa-book fa-2xl"></i>
+                                    <p className='cell__app__text skills__text'>Skills</p>
                                     </button>
                                 </div>
                                 <div className="bluelines">
                                     <button className='button__bluelines' onClick={() => handleCategory(softSkillsImg)}>
-                                    <i class="fa-solid fa-people-group fa-2xl"></i>
+                                    <i className=" fa-solid fa-people-group fa-2xl"></i>
                                     <p className='cell__app__text'>SoftSkills</p>
                                     </button>
                                 </div>
                                 <div className="bluelines">
-                                    <button className='button__bluelines' onClick={() => handleCategory(portfolioImg)}>Portfolio</button>
+                                    <button className='button__bluelines ' onClick={() => handleCategory(portfolioImg)}>
+                                        <i className=" fa-sharp fa-solid fa-briefcase fa-2xl"></i>
+                                        <p className='cell__app__text'>Portfolio</p>
+                                    </button>
                                 </div>
-                                <div className="bluelines">
-                                    <button className='button__bluelines'>Contact</button>
+                                <div className="bluelines cell__contact">
+                                    <button className='button__bluelines '>
+                                    <i className=" fa-solid fa-link fa-2xl"></i>
+                                    <p className='cell__app__text contact__text'>Contact</p>
+                                        </button>
                                 </div>
                             </div>
                     {index === 0 && category[index]}

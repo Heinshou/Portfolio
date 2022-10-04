@@ -415,6 +415,10 @@ button:hover span:nth-child(4) {
     font-size: 14px;
 }
 
+.icons__wrapper{
+    margin-left: 29%;
+}
+
     .skills__container {
         margin-top: 10%;
         text-align: center;
@@ -529,10 +533,17 @@ button:hover span:nth-child(4) {
         width: 80%;
         height: 80%;
         margin: auto;
-        background-color: white;
         display: block;
         position: relative;
         overflow: hidden;
+    }
+
+    .menu__cell__screen{
+        background-color: #4abfca;
+    }
+
+    .images__cell__screen{
+        background-color: white;
     }
     
     .buttons__container{
@@ -567,6 +578,13 @@ button:hover span:nth-child(4) {
         color: #8A0063;
     }
 
+    .right__side__bluelines{
+        height: auto;
+        width: 88%;
+        border: none;
+        margin: auto;
+    }
+
     .screen__off{
         height: 280px;
         width:  280px;
@@ -582,17 +600,34 @@ button:hover span:nth-child(4) {
     }
 
     .button__bluelines{
-        color:black
+        color:black;
+        padding: 10px 0px 0px 0px;
     }
 
     .bluelines{
         display: inline-block;
-        width: 50px;
+        width: 84px;
+        margin: 20px 0px 0px 0px;
     }
 
     .cell__app__text{
         color: black;
         margin-top: 25%;
+        font-family: 'Press Start 2P', cursive;
+        font-size: 0.55rem;
     }
+    .cell__contact{
+        margin-top: 5%;
+        margin-left:4%;
+    }
+    
+    .skills__text{
+        margin-top: 42%;
+    }
+
+    .contact__text{
+        margin-top: 31%;
+    }
+    
 }
 
