@@ -171,11 +171,11 @@ p{
   
 }
 
-.fa-twitter{
-    animation-delay: 2s;
-   
-}
+a i:hover{
+transition-delay: none;
+color: black;
 
+}
 @keyframes float {
     0%, 100%{
         transform: translateY(0);
@@ -208,6 +208,7 @@ p{
         margin: auto;
         margin-top: 10%;
         color: white;
+        animation: none;
     }
 
     .fa-linkedin{
@@ -228,6 +229,11 @@ p{
     .icon{
         font-size: 2.5rem;
     }
+
+    .icons__wrapper{
+        margin-top: 5%;
+    }
+    
 
 }
 

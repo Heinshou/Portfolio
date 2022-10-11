@@ -42,7 +42,7 @@ const Skills = () => {
 
     const [category, setCategory] = useState(tvOff);
     const [index, setIndex] = useState(0);
-    const [powerButton, setPowerButton] = useState('');
+    const [powerButton, setPowerButton] = useState('buttons__off');
     const [cellCategories, setCellCategories] = useState('cell__categories__off');
     const [customScreen, setCustomScreen] = useState('menu__cell__screen');
     const [homeButton, setHomeButton] = useState('fa-solid fa-power-off fa-lg')
@@ -69,60 +69,60 @@ const Skills = () => {
     }
 
     const handleCategory = (array) => {
-        setCategory(array);
-        setIndex(0);
+        if (category === tvOff) {
+
+        } else {
+            setCategory(array);
+            setIndex(0);
+        }
     }
 
     const turnTV = () => {
-        if (powerButton === '') {
-            setPowerButton('prendio')
+        if (powerButton === 'buttons__off') {
+            setPowerButton('buttons__on')
             setIndex(0)
             setCategory(skillsImg)
         } else {
-            setPowerButton('')
+            setPowerButton('buttons__off')
             setCategory(tvOff)
         }
     }
+    // console.log(category);
+    // console.log(powerButton);
+    // console.log(cellCategories);
+    // console.log(customScreen);
+    // console.log(homeButton)
 
     const turnCell = () => {
-        if(powerButton === ''){
-            setPowerButton('prendio')
+        if( powerButton === 'buttons__off' && cellCategories === 'cell__categories__off' && homeButton === 'fa-solid fa-power-off fa-lg'){
             setCellCategories('right__side__bluelines')
             setCategory('')
-        } else {
-            setPowerButton('')
+        } else if ( powerButton === 'buttons__off' && cellCategories === 'right__side__bluelines' && homeButton === 'fa-solid fa-power-off fa-lg') {
             setCategory(tvOff)
-            
+            setCellCategories('cell__categories__off')
+        } else if ( powerButton === 'buttons__off' && cellCategories === 'cell__categories__off' && homeButton === 'fa-solid fa-house fa-lg') {
+            setCategory('')
+            setCellCategories('right__side__bluelines')
         }
     }
-
-    useEffect(() => {
-        if (category !== tvOff) {
-            setPowerButton('prendio')
-            
-        } else{
-            setPowerButton('')
-            setCellCategories('cell__categories__off')
-        }
-
-    }, [category])
 
     useEffect(() => {
         if (category !== '') {
             setCellCategories('cell__categories__off')
             setCustomScreen('images__cell__screen')
-        }  else {
-            setCellCategories('right__side__bluelines') 
+        } else {
+            setCellCategories('right__side__bluelines')
             setCustomScreen('menu__cell__screen')
+
         }
 
     }, [category])
 
-    useEffect(()=> {
-        if(customScreen !== 'images__cell__screen' || powerButton === ''){
-            setHomeButton('fa-solid fa-power-off fa-lg')
-        }   else {
+    useEffect(() => {
+        if (category !== '' && category !== tvOff) {
             setHomeButton('fa-solid fa-house fa-lg')
+        } else {
+            setHomeButton('fa-solid fa-power-off fa-lg')
         }
     })
 
@@ -139,13 +139,11 @@ const Skills = () => {
                                 </div>
                             </div>
                             <div className="left__side__rectangle">
-                                {/* <div className="left__side__rectangle__two"> */}
                                 <p className='tv__titles'>
                                     {category === skillsImg ? skillsTitles[index] : ''}
                                     {category === softSkillsImg ? softSkillsTitles[index] : ''}
                                     {category === portfolioImg ? portfolioTitles[index] : ''}
                                 </p>
-                                {/* </div> */}
                             </div>
                             <div className="left__side__bluelines">
                                 <p className='description__text'>
@@ -157,12 +155,10 @@ const Skills = () => {
                         </div>
                         <div className="screen__frame">
                             <div className="screen">
-                                {/* <div className={`skills__slider ${skillsImg[index]}`}> */}
                                 {index === 0 && category[index]}
                                 {index === 1 && category[index]}
                                 {index === 2 && category[index]}
                                 {index === 3 && category[index]}
-                                {/* </div> */}
                                 <div className="soft__skills">
                                 </div>
                             </div>
@@ -172,15 +168,17 @@ const Skills = () => {
                                 <div className="circle__one"></div>
                             </div>
                             <div className="right__side__rectangle">
-                                <div onClick={clickPrev} className="circle__rectangle change__channel">&#60;</div>
+                                <div onClick={clickPrev} className={` circle__rectangle change__channel ${powerButton}`}>
+                                    <i className="fa-solid fa-angle-left"></i>
+                                </div>
                                 <div className="circle__rectangle">
                                     <div onClick={() => turnTV()} className={`power__button ${powerButton}`}>
-                                        <div className="power__button__circle">
-                                            <div className={`power__button__rectangle ${powerButton}`}></div>
-                                        </div>
+                                        <i className="fa-solid fa-power-off fa-md"></i>
                                     </div>
                                 </div>
-                                <span onClick={clickNext} className="circle__rectangle change__channel">&#62;</span>
+                                <span onClick={clickNext} className={` circle__rectangle change__channel ${powerButton}`}>
+                                    <i className="fa-solid fa-angle-right"></i>
+                                </span>
                             </div>
                             <div className="right__side__bluelines">
                                 <div className="bluelines">
@@ -203,43 +201,57 @@ const Skills = () => {
             <div className="cell__container">
                 <span className='cell__audio'></span>
                 <div className={`cell__screen ${customScreen}`}>
-                <div  className={`${cellCategories}`}>
-                                <div className='bluelines'>
-                                    <button className='button__bluelines' onClick={() => handleCategory(skillsImg)}>
-                                    <i className=" fa-solid fa-book fa-2xl"></i>
-                                    <p className='cell__app__text skills__text'>Skills</p>
-                                    </button>
-                                </div>
-                                <div className="bluelines">
-                                    <button className='button__bluelines' onClick={() => handleCategory(softSkillsImg)}>
-                                    <i className=" fa-solid fa-people-group fa-2xl"></i>
-                                    <p className='cell__app__text'>SoftSkills</p>
-                                    </button>
-                                </div>
-                                <div className="bluelines">
-                                    <button className='button__bluelines ' onClick={() => handleCategory(portfolioImg)}>
-                                        <i className=" fa-sharp fa-solid fa-briefcase fa-2xl"></i>
-                                        <p className='cell__app__text'>Portfolio</p>
-                                    </button>
-                                </div>
-                                <div className="bluelines cell__contact">
-                                    <button className='button__bluelines '>
-                                    <i className=" fa-solid fa-link fa-2xl"></i>
-                                    <p className='cell__app__text contact__text'>Contact</p>
-                                        </button>
-                                </div>
-                            </div>
+                    <div className={`${cellCategories}`}>
+                        <div className='bluelines'>
+                            <button className='button__bluelines' onClick={() => handleCategory(skillsImg)}>
+                                <i className=" fa-solid fa-book fa-2xl"></i>
+                                <p className='cell__app__text skills__text'>Skills</p>
+                            </button>
+                        </div>
+                        <div className="bluelines">
+                            <button className='button__bluelines' onClick={() => handleCategory(softSkillsImg)}>
+                                <i className=" fa-solid fa-people-group fa-2xl"></i>
+                                <p className='cell__app__text'>SoftSkills</p>
+                            </button>
+                        </div>
+                        <div className="bluelines">
+                            <button className='button__bluelines ' onClick={() => handleCategory(portfolioImg)}>
+                                <i className=" fa-sharp fa-solid fa-briefcase fa-2xl"></i>
+                                <p className='cell__app__text'>Portfolio</p>
+                            </button>
+                        </div>
+                        <div className="bluelines cell__contact">
+                            <button className='button__bluelines '>
+                                <i className=" fa-solid fa-link fa-2xl"></i>
+                                <p className='cell__app__text contact__text'>Contact</p>
+                            </button>
+                        </div>
+                    </div>
+                    <p className='cell__titles'>
+                                    {category === skillsImg ? skillsTitles[index] : ''}
+                                    {category === softSkillsImg ? softSkillsTitles[index] : ''}
+                                    {category === portfolioImg ? portfolioTitles[index] : ''}
+                                </p>
                     {index === 0 && category[index]}
                     {index === 1 && category[index]}
                     {index === 2 && category[index]}
                     {index === 3 && category[index]}
+                    <p className='cell__description__text'>
+                                    {category === skillsImg ? skillsDescription[index] : ''}
+                                    {category === softSkillsImg ? softSkillsDescription[index] : ''}
+                                    {category === portfolioImg ? portfolioDescription[index] : ''}
+                         </p>
                 </div>
                 <div className="buttons__container">
-                    <button className='cell__left__button' onClick={clickPrev}></button>
-                    <button className="cell__power__button" onClick={() => turnCell()}>
-                    <i className={`${homeButton}`}></i>
+                    <button className='cell__button' onClick={clickPrev}>
+                        <i className="fa-solid fa-arrow-left-long"></i>
                     </button>
-                    <button className="cell__right__button" onClick={clickNext}></button>
+                    <button className="cell__power__button" onClick={() => turnCell()}>
+                        <i className={`${homeButton}`}></i>
+                    </button>
+                    <button className="cell__button" onClick={clickNext}>
+                        <i className="fa-solid fa-arrow-right-long"></i>
+                    </button>
                 </div>
             </div>
         </section>

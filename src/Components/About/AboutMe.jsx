@@ -137,8 +137,12 @@ const AboutMe = () => {
             Intermediate JS, CSS, React</p>
         </div>
         <div className='icons__wrapper'>
-          <i className="fa-brands fa-github icon"></i>
-          <i className="fa-brands fa-linkedin icon"></i>
+          <a  href='https://github.com/Heinshou'>
+            <i className="fa-brands fa-github icon"></i>
+          </a>
+          <a href='https://www.linkedin.com/in/miguel-ch%C3%A1vez-413145221/'>
+            <i className="fa-brands fa-linkedin icon"></i>
+          </a>
         </div>
       </div>
     </main>

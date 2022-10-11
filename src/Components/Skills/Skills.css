@@ -113,13 +113,13 @@
     text-align: center;
 }
 
-.description__container{
-    align-items:flex-start;
+.description__container {
+    align-items: flex-start;
 }
 
-.description__text{
+.description__text {
     left: 5%;
-    font-size:17px;
+    font-size: 17px;
     position: relative;
     top: 10px;
     color: #07bccc;
@@ -223,12 +223,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .change__channel {
     cursor: pointer;
-    font-size:1rem;
-    
+    font-size: 1rem;
+
 }
 
 .change__channel:hover {
@@ -242,8 +243,7 @@
     /* box-shadow: inset 0 0 30px #8A0063, 0 0 30px, 0 0 50px #8A0063; */
 }
 
-.power__button{
-    background-color: #f40468;    
+.power__button {
     height: 75%;
     width: 75%;
     border-radius: 50%;
@@ -252,33 +252,21 @@
     align-items: center;
 }
 
-.power__button:hover{
+.power__button:hover {
     cursor: pointer;
 }
 
-.power__button__circle{
-    background-color: black;
-    height: 75%;
-    width: 75%;
-    border-radius: 50%;
-    display: flex;
-    align-items:flex-end; 
-    justify-content: center;
+.buttons__on {
+    color: #07bccc;
+}
 
+.buttons__off {
+    color: #572364;
 }
 
 
-
-.power__button__rectangle{
-    background-color: #f40468;
-    width: 20%;
-    height: 80%;
-    border: 2px solid black;
-    margin-bottom: 25%;
-}
-
-.prendio{
-    background-color: #07bccc;
+.prendio {
+    background-color: #031321;
 }
 
 .bluelines {
@@ -295,6 +283,7 @@
     background-color: rgba(0, 195, 255, 0);
     color: white;
     border: none;
+    font-size: 9px;
 }
 
 button {
@@ -376,61 +365,61 @@ button:hover span:nth-child(4) {
     transition-delay: .75s;
 }
 
-.teamWork__image{
+.teamWork__image {
     border-radius: 75%;
 }
 
-.portfolio__weather{
+.portfolio__weather {
     width: 100%;
     height: 107%;
 }
 
-.image__static{
+.image__static {
     height: 120%;
     width: 120%;
 }
 
-.screen__off{
+.screen__off {
     height: 530px;
-    width:  530px;
+    width: 530px;
 }
 
-.tv__titles{
-    margin:0px;
+.tv__titles {
+    margin: 0px;
     margin-block-end: 0px;
     margin-block-start: 0px;
 }
 
-.cell__container{
+.cell__container {
     display: none;
 }
 
 @media screen and (max-width: 1024px) {
 
-.cell__container{
-    display: none;
-}
+    .cell__container {
+        display: none;
+    }
 
-.description__text{
-    font-size: 14px;
-}
+    .description__text {
+        font-size: 14px;
+    }
 
-.icons__wrapper{
-    margin-left: 29%;
-}
+    .icons__wrapper {
+        margin-left: 29%;
+    }
 
     .skills__container {
         margin-top: 10%;
         text-align: center;
-        
+
     }
-    
+
     .skills__title {
         font-variation-settings: "wght" 900, "ital" 1;
         font-size: 3rem;
         text-align: center;
         color: transparent;
-        margin-left:10% ;
+        margin-left: 10%;
         margin-bottom: 5%;
         text-shadow: 5px 5px 0px #07bccc,
             5px 5px 0px #e601c0,
@@ -439,70 +428,86 @@ button:hover span:nth-child(4) {
             25px 25px 5px #482896;
     }
 
-    .description__text{
-       font-size: 10px;
-       padding-right: 15%;
-       padding-left: 5%;
-       margin-top: 15%;
+    .description__text {
+        font-size: 10px;
+        padding-right: 15%;
+        padding-left: 5%;
+        margin-top: 15%;
     }
-    
-    .image__static{
+
+    .image__static {
         height: 120%;
         width: 120%;
     }
-    
-    .screen__off{
+
+    .screen__off {
         height: 350px;
-        width:  350px;
+        width: 350px;
     }
-   
+
     .button__bluelines {
         background-color: rgba(0, 195, 255, 0);
         color: white;
         border: none;
     }
 
-    button{
-        padding:10px 10px 10px 10px;
+    button {
+        padding: 10px 10px 10px 10px;
         font-size: 75%;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .screen__off{
+    .screen__off {
         height: 260px;
         width: 260px;
     }
-    }
 
-    .cell__container{
+    .cell__container {
         display: none;
     }
+    
+    .button__bluelines{
+        padding-left: 5px;
+        font-size: 8px;
+    }
+    
+    div p{
+        font-size: 12px;
+    }
+
+}
+
 
 
 @media screen and (max-width: 426px) {
 
-    .television__container{
-        display:none;
+
+    .icons__wrapper {
+        margin-left: 24%;
     }
 
-    .skills__container{
+    .television__container {
+        display: none;
+    }
+
+    .skills__container {
         align-items: flex-start;
         justify-content: center;
-        margin-top: 5%;
+        margin-top: 0%;
         margin-bottom: 5%;
         height: auto;
     }
 
-    .skills__title{
+    .skills__title {
         margin: 0;
         margin-top: 20%;
         display: inline-block;
         margin-right: 5%;
-        
+
     }
 
-    .cell__container{
+    .cell__container {
         width: 250px;
         height: 350px;
         background-color: #031321;
@@ -517,7 +522,7 @@ button:hover span:nth-child(4) {
         max-width: 100%;
     }
 
-    .cell__audio{
+    .cell__audio {
         display: block;
         width: 50px;
         height: 10px;
@@ -529,29 +534,53 @@ button:hover span:nth-child(4) {
         box-shadow: inset 0 0 30px #8a0063, 0 0 30px, 0 0 50px #8a0063;
     }
 
-    .cell__screen{
+    .cell__screen {
         width: 80%;
         height: 80%;
         margin: auto;
         display: block;
         position: relative;
-        overflow: hidden;
+        overflow: scroll;
     }
 
-    .menu__cell__screen{
+    .menu__cell__screen {
         background-color: #4abfca;
     }
 
-    .images__cell__screen{
+    .images__cell__screen {
         background-color: white;
     }
-    
-    .buttons__container{
+
+    .cell__titles {
+        color: #07bccc;
+        justify-content: center;
+        font-size: 25px;
+        font-variation-settings: "wght" 900, "ital" 1;
+        text-align: center;
+        margin-bottom: 0;
+        text-shadow:
+            1px 1px 0px #e601c0;
+    }
+
+    .cell__description__text {
+        color: black;
+        position: absolute;
+        top: 90%;
+        padding:10px 5px 10px 5px;
+        font-family: 'Inconsolata', monospace;
+        background-color: #4abfca;
+        display: flex;
+        min-width: 0px;
+        padding:0px 0px 0px 0px;
+        
+    }
+
+    .buttons__container {
         width: 60%;
         margin: auto;
     }
 
-    .cell__power__button{
+    .cell__power__button {
         margin-left: 10%;
         margin-right: 10%;
         padding: 5px 5px 5px 5px;
@@ -559,77 +588,69 @@ button:hover span:nth-child(4) {
         border-radius: 50%;
         background-color: #031321;
         color: #8a0063;
-        box-shadow: inset 0 0 30px #031321, 0 0 30px, 0 0 50px ;
+        box-shadow: inset 0 0 30px #031321, 0 0 30px, 0 0 50px;
     }
 
-    .cell__left__button{
+    .cell__button {
         width: 40px;
         background-color: #031321;
-        height: 10px;
+        height: 17px;
         padding: 0px;
         box-shadow: inset 0 0 30px #031321, 0 0 30px, 0 0 50px #8a0063;
         color: #8A0063;
+        cursor: pointer;
     }
 
-    .cell__right__button{
-        width: 40px;
-        background-color: #031321;
-        height: 10px;
-        padding: 0px;
-        box-shadow: inset 0 0 30px #031321, 0 0 30px, 0 0 50px #8a0063;
-        color: #8A0063;
-    }
-
-    .right__side__bluelines{
+    .right__side__bluelines {
         height: auto;
         width: 88%;
         border: none;
         margin: auto;
     }
 
-    .screen__off{
+    .screen__off {
         height: 280px;
-        width:  280px;
+        width: 280px;
         margin-left: -20%;
     }
 
-    .cell__categories__on{
+    .cell__categories__on {
         display: flex;
     }
 
-    .cell__categories__off{
+    .cell__categories__off {
         display: none;
     }
 
-    .button__bluelines{
-        color:black;
+    .button__bluelines {
+        color: black;
         padding: 10px 0px 0px 0px;
     }
 
-    .bluelines{
+    .bluelines {
         display: inline-block;
         width: 84px;
         margin: 20px 0px 0px 0px;
     }
 
-    .cell__app__text{
+    .cell__app__text {
         color: black;
         margin-top: 25%;
         font-family: 'Press Start 2P', cursive;
         font-size: 0.55rem;
     }
-    .cell__contact{
+
+    .cell__contact {
         margin-top: 5%;
-        margin-left:4%;
+        margin-left: 4%;
     }
-    
-    .skills__text{
+
+    .skills__text {
         margin-top: 42%;
     }
 
-    .contact__text{
+    .contact__text {
         margin-top: 31%;
     }
-    
-}
 
+}

@@ -32,22 +32,22 @@
     display: inline-block;
     padding: 25px 10px;
     color: white;
-    margin: 0px 15px;
+    margin: 0px 0px;
     text-transform: uppercase;
     letter-spacing: 2px;
     text-decoration: none;
     font-size: 1rem;
-    overflow: hidden;
+    overflow: unset;
     transition: 0.2s;
   }
-  a:hover
+  /* a:hover
   {
     color: #255784;
     background: #2196f3;
     box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
     transition-delay: 1s;
   }
-  
+   */
   a span{
     position: absolute;
     display: block;
