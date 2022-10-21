@@ -67,6 +67,11 @@
     animation: move 4000ms ;
 }
 
+.profile__picture{
+    max-width: 100%;
+    max-height: 100%;
+}
+
 @keyframes move {
     0%{
         transition-delay: .25s;
@@ -113,7 +118,7 @@
     }
 }
 
-.name{
+.my__name{
     color:white;
     animation: 2.8s brigthName ease-in;
     text-shadow: 0px 0px 10px #15f4EE, 0px 0px 30px #15f4EE;
@@ -187,7 +192,7 @@ color: black;
     }
 }
 @media screen and (max-width: 1024px) {
-    .name{
+    .my__name{
         margin-right: 0;
     }
     div p{
@@ -219,7 +224,7 @@ color: black;
 }
 
 @media screen and (max-width: 768px) {
-    .name{
+    .my__name{
         font-size: 2rem;
     }
     div p{
@@ -273,7 +278,7 @@ color: black;
         justify-content: center;
     }
 
-    .name{
+    .my__name{
         font-size: 1.5rem;
         padding: 0;
         margin-top: 3rem;  

@@ -1,5 +1,6 @@
 import React from 'react'
 import './AboutMe.css'
+import profilePicture from '../../utils/profilePicture.jpeg'
 
 const AboutMe = () => {
   return (
@@ -9,14 +10,19 @@ const AboutMe = () => {
           <div className='frame__two'>
             <div className='frame__three'>
               <div className='frame__four'>
-                <div className='frame__five'></div>
+                <div className='frame__five'>
+                  <img 
+                  src={profilePicture}
+                  className='profile__picture'
+                  alt='Profile Picture'/>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div className='description__container'>
-        <h1 className='name'>Miguel Chávez</h1>
+        <h1 className='my__name'>Miguel Chávez</h1>
         <h2 className='web__desing'>
           <svg id="text" width="525" height="193" viewBox="0 0 525 193" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="525" height="193" fill="#F5F5F5" />

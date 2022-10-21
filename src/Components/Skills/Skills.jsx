@@ -45,7 +45,8 @@ const Skills = () => {
     const [powerButton, setPowerButton] = useState('buttons__off');
     const [cellCategories, setCellCategories] = useState('cell__categories__off');
     const [customScreen, setCustomScreen] = useState('menu__cell__screen');
-    const [homeButton, setHomeButton] = useState('fa-solid fa-power-off fa-lg')
+    const [homeButton, setHomeButton] = useState('fa-solid fa-power-off fa-lg');
+    const [formDisplay, setFormDisplay] = useState('hidden')
 
 
     const clickNext = () => {
@@ -71,10 +72,12 @@ const Skills = () => {
     const handleCategory = (array) => {
         if (category === tvOff) {
 
-        } else {
-            setCategory(array);
+            console.log('aqui2')
+        }  else  {  
+            setCategory(array)
             setIndex(0);
-        }
+            console.log('aqui3')
+        }       
     }
 
     const turnTV = () => {
@@ -87,22 +90,34 @@ const Skills = () => {
             setCategory(tvOff)
         }
     }
+
+    // console.log(formDisplay)
     // console.log(category);
     // console.log(powerButton);
     // console.log(cellCategories);
     // console.log(customScreen);
-    // console.log(homeButton)
+    // console.log(homeButton);
 
     const turnCell = () => {
-        if( powerButton === 'buttons__off' && cellCategories === 'cell__categories__off' && homeButton === 'fa-solid fa-power-off fa-lg'){
+        if (powerButton === 'buttons__off' && cellCategories === 'cell__categories__off' && homeButton === 'fa-solid fa-power-off fa-lg') {
             setCellCategories('right__side__bluelines')
             setCategory('')
-        } else if ( powerButton === 'buttons__off' && cellCategories === 'right__side__bluelines' && homeButton === 'fa-solid fa-power-off fa-lg') {
+        } else if (powerButton === 'buttons__off' && cellCategories === 'right__side__bluelines' && homeButton === 'fa-solid fa-power-off fa-lg') {
             setCategory(tvOff)
             setCellCategories('cell__categories__off')
-        } else if ( powerButton === 'buttons__off' && cellCategories === 'cell__categories__off' && homeButton === 'fa-solid fa-house fa-lg') {
+        } else if (powerButton === 'buttons__off' && cellCategories === 'cell__categories__off' && homeButton === 'fa-solid fa-house fa-lg') {
             setCategory('')
             setCellCategories('right__side__bluelines')
+        } 
+    }
+
+    const switchForm = () => {
+        if (category === ''){
+            setFormDisplay('form')
+            setCellCategories('cell__categories__off')
+            console.log(category)
+        } else {
+
         }
     }
 
@@ -110,10 +125,9 @@ const Skills = () => {
         if (category !== '') {
             setCellCategories('cell__categories__off')
             setCustomScreen('images__cell__screen')
-        } else {
+        } else{
             setCellCategories('right__side__bluelines')
             setCustomScreen('menu__cell__screen')
-
         }
 
     }, [category])
@@ -124,7 +138,7 @@ const Skills = () => {
         } else {
             setHomeButton('fa-solid fa-power-off fa-lg')
         }
-    })
+    },[category] )
 
     return (
         <section className='skills__container'>
@@ -191,7 +205,7 @@ const Skills = () => {
                                     <button className='button__bluelines' onClick={() => handleCategory(portfolioImg)}>Portfolio</button>
                                 </div>
                                 <div className="bluelines">
-                                    <button className='button__bluelines'>Contact</button>
+                                    <button className='button__bluelines' onClick={() => switchForm()}>Contact</button>
                                 </div>
                             </div>
                         </div>
@@ -221,26 +235,34 @@ const Skills = () => {
                             </button>
                         </div>
                         <div className="bluelines cell__contact">
-                            <button className='button__bluelines '>
+                            <button className='button__bluelines ' onClick={() => switchForm()}>
                                 <i className=" fa-solid fa-link fa-2xl"></i>
                                 <p className='cell__app__text contact__text'>Contact</p>
                             </button>
                         </div>
                     </div>
                     <p className='cell__titles'>
-                                    {category === skillsImg ? skillsTitles[index] : ''}
-                                    {category === softSkillsImg ? softSkillsTitles[index] : ''}
-                                    {category === portfolioImg ? portfolioTitles[index] : ''}
-                                </p>
+                        {category === skillsImg ? skillsTitles[index] : ''}
+                        {category === softSkillsImg ? softSkillsTitles[index] : ''}
+                        {category === portfolioImg ? portfolioTitles[index] : ''}
+                    </p>
                     {index === 0 && category[index]}
                     {index === 1 && category[index]}
                     {index === 2 && category[index]}
                     {index === 3 && category[index]}
                     <p className='cell__description__text'>
-                                    {category === skillsImg ? skillsDescription[index] : ''}
-                                    {category === softSkillsImg ? softSkillsDescription[index] : ''}
-                                    {category === portfolioImg ? portfolioDescription[index] : ''}
-                         </p>
+                        {category === skillsImg ? skillsDescription[index] : ''}
+                        {category === softSkillsImg ? softSkillsDescription[index] : ''}
+                        {category === portfolioImg ? portfolioDescription[index] : ''}
+                    </p>
+                    <form className={`${formDisplay}`} netlify>
+                        <input placeholder='Name' type="text" className="name " id='name'/>
+                        <br />
+                        <input placeholder='Email' type="email" className='email' id='email' />
+                        <br />
+                        <textarea placeholder='Message' className="message" cols='5' rows='5' id='message' />
+                        <input type="submit" className='form__button' value='Enviar' />
+                    </form>
                 </div>
                 <div className="buttons__container">
                     <button className='cell__button' onClick={clickPrev}>
