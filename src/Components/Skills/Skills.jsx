@@ -255,7 +255,7 @@ const Skills = () => {
                         {category === softSkillsImg ? softSkillsDescription[index] : ''}
                         {category === portfolioImg ? portfolioDescription[index] : ''}
                     </p>
-                    <form className={`${formDisplay}`} netlify name='cel__form' method='POST'>
+                    <form className={`${formDisplay}`} name='contact' method='POST' data-netlify="true">
                         <input placeholder='Name' type="text" className="name " id='name'/>
                         <br />
                         <input placeholder='Email' type="email" className='email' id='email' />
