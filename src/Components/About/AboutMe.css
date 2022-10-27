@@ -218,7 +218,7 @@ color: black;
         max-height: 59%;
         z-index: 3;
         position: absolute;
-        left: 16.3%;
+        left: 16.45%;
         bottom: 25.5%;
         animation: rhombus 4000ms;
         clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
@@ -230,6 +230,7 @@ color: black;
 
     .description{
         margin-top: 11%;
+        padding: 3%;
     }
     div p{
         font-size: 15px;
