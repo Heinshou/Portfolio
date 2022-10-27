@@ -145,6 +145,10 @@
     margin-bottom: 2rem;
     margin-right: 20px; 
 }
+.description{
+    border: 2px solid white;
+    box-shadow: inset 0 0 30px #8A0063, 0 0 30px, 0 0 50px #8A0063;
+}
 
 p{
     display: flex;
@@ -209,8 +213,23 @@ color: black;
     }
 }
 @media screen and (max-width: 1024px) {
+    .profile__picture{
+        max-width: 59%;
+        max-height: 59%;
+        z-index: 3;
+        position: absolute;
+        left: 16.3%;
+        bottom: 25.5%;
+        animation: rhombus 4000ms;
+        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    }
+
     .my__name{
         margin-right: 0;
+    }
+
+    .description{
+        margin-top: 11%;
     }
     div p{
         font-size: 15px;
@@ -241,8 +260,20 @@ color: black;
 }
 
 @media screen and (max-width: 768px) {
+    .profile__picture{
+        max-width: 45%;
+        max-height: 45%;
+        bottom: 34%;
+        
+    }
+
     .my__name{
         font-size: 2rem;
+    }
+
+    .description{
+        padding: 5%;
+        margin-top: 12%;
     }
     div p{
         font-size: 14px;
@@ -285,6 +316,13 @@ color: black;
     .frame__five{
         height: 30vh;
     }
+
+    .profile__picture{
+        max-width: 46%;
+        max-height: 46%;
+        bottom: 49%;
+        left: 27%;
+    }
   
     .description__container{  
         width: 100%; 
@@ -302,8 +340,12 @@ color: black;
     }
     
     .description{
+        border: 2px solid white;
+        box-shadow: inset 0 0 30px #8A0063, 0 0 30px, 0 0 50px #8A0063;
         margin-left: 5%;
         margin-right: 5%;
+        margin-top: 10%;
+        padding: 5%;
     }
     
     .icons__wrapper{
@@ -322,4 +364,11 @@ color: black;
         animation: float 2s ease-in-out infinite;
       
     }
+}
+
+@media screen and (max-width: 320px) {
+    .profile__picture{
+        bottom: 54.5%;
+}
+  
 }

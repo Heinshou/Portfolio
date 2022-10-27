@@ -458,6 +458,10 @@ button:hover span:nth-child(4) {
 }
 
 @media screen and (max-width: 768px) {
+    .skills__container{
+        margin-top: 15%;
+    }
+
     .screen__off {
         height: 260px;
         width: 260px;
@@ -494,7 +498,7 @@ button:hover span:nth-child(4) {
     .skills__container {
         align-items: flex-start;
         justify-content: center;
-        margin-top: 0%;
+        margin-top: 5%;
         margin-bottom: 5%;
         height: auto;
     }
@@ -696,4 +700,9 @@ button:hover span:nth-child(4) {
         
     }
 
+}
+@media screen and (max-width: 426px) {
+    .skills__container{
+        margin-top: 15%;
+    }
 }
