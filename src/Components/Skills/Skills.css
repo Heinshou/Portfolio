@@ -13,8 +13,7 @@
     font-size: 3rem;
     text-align: center;
     color: transparent;
-    margin-left: 10%;
-    margin-bottom: 0;
+    margin-bottom: 5%;
     text-shadow: 5px 5px 0px #07bccc,
         5px 5px 0px #e601c0,
         10px 10px 0px #e9019a,
@@ -30,7 +29,6 @@
     justify-content: center;
     display: flex;
     margin: auto;
-    margin-left: 14%;
 }
 
 .television__frame {
@@ -404,10 +402,6 @@ button:hover span:nth-child(4) {
         font-size: 14px;
     }
 
-    .icons__wrapper {
-        margin-left: 29%;
-    }
-
     .skills__container {
         margin-top: 10%;
         text-align: center;
@@ -419,7 +413,6 @@ button:hover span:nth-child(4) {
         font-size: 3rem;
         text-align: center;
         color: transparent;
-        margin-left: 10%;
         margin-bottom: 5%;
         text-shadow: 5px 5px 0px #07bccc,
             5px 5px 0px #e601c0,
@@ -457,6 +450,12 @@ button:hover span:nth-child(4) {
     }
 }
 
+@media screen and (max-width: 900px) {
+    .skills__title{
+    margin-top: 20%;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .skills__container{
         margin-top: 15%;
@@ -485,12 +484,6 @@ button:hover span:nth-child(4) {
 
 
 @media screen and (max-width: 426px) {
-
-
-    .icons__wrapper {
-        margin-left: 24%;
-    }
-
     .television__container {
         display: none;
     }

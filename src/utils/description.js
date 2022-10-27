@@ -1,6 +1,6 @@
 export const skills = [
     'Asynchronous Programming, Functional Programming',
-    'Flexbox, Transitions, Transform, Animations, Box Model',
+    'Responsive desing, Flexbox, Transitions, Transform, Animations, Box Model',
     'SEO, Title, Lists, Tables, Links, Atributes',
     'React Fragments, React context and context API, Refs and DOM, Custom Hooks'
 ]
