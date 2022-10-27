@@ -11,16 +11,16 @@ const AboutMe = () => {
             <div className='frame__three'>
               <div className='frame__four'>
                 <div className='frame__five'>
+                <img 
+                  src={profilePicture}
+                  className='profile__picture'
+                  alt='Profile Picture'/>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <img 
-                  src={profilePicture}
-                  className='profile__picture'
-                  alt='Profile Picture'/>
       <div className='description__container'>
         <h1 className='my__name'>Miguel Chávez</h1>
         <h2 className='web__desing'>

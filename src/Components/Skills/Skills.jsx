@@ -175,6 +175,7 @@ const Skills = () => {
                                 {index === 3 && category[index]}
                                 <div className="soft__skills">
                                 </div>
+                                
                             </div>
                         </div>
                         <div className="right__side">
