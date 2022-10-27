@@ -68,12 +68,12 @@
 }
 
 .profile__picture{
-    max-width: 50%;
-    max-height: 50%;
+    max-width: 65%;
+    max-height: 65%;
     z-index: 3;
     position: absolute;
-    left: 21.2%;
-    bottom: 30%;
+    left: 16.3%;
+    bottom: 23%;
     animation: rhombus 4000ms;
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 }
