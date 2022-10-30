@@ -102,6 +102,7 @@ const Skills = () => {
         if (powerButton === 'buttons__off' && cellCategories === 'cell__categories__off' && homeButton === 'fa-solid fa-power-off fa-lg') {
             setCellCategories('right__side__bluelines')
             setCategory('')
+            setFormDisplay('hidden')
         } else if (powerButton === 'buttons__off' && cellCategories === 'right__side__bluelines' && homeButton === 'fa-solid fa-power-off fa-lg') {
             setCategory(tvOff)
             setCellCategories('cell__categories__off')
@@ -115,7 +116,6 @@ const Skills = () => {
         if (category === ''){
             setFormDisplay('form')
             setCellCategories('cell__categories__off')
-            console.log(category)
         } else {
 
         }
